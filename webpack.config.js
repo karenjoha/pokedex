@@ -1,5 +1,5 @@
 const path = require("path");
-// const HTMLWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 // const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
@@ -27,4 +27,18 @@ module.exports = {
     compress: true,
     port: 9001,
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html", // Ruta al archivo HTML de plantilla
+      filename: "index.html", // Nombre del archivo HTML generado
+      // minify: {
+      //   collapseWhitespace: true,
+      //   removeComments: true,
+      //   removeRedundantAttributes: true,
+      //   removeScriptTypeAttributes: true,
+      //   removeStyleLinkTypeAttributes: true,
+      //   useShortDoctype: true,
+      // },
+    })
+  ],
 };
