@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+$font-header: "Open Sans", sans-serif;
+$font-body: "Edu AU VIC WA NT Hand", cursive;
+$background-color-body: rgb(154, 184, 237);
+$background-color-header: rgb(132, 123, 232);
+
+@mixin flex-and-align {
+  display: flex;
+  align-items: center;
+}
+
+@mixin align-and-justify {
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin rounded-box($radius: 25px) {
+  border-radius: $radius;
+  background-color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $background-color-body;
+}
+
+header {
+  position: relative;
+}
+
+header nav {
+  @include flex-and-align;
+  background-color: $background-color-header;
+  padding: 10px;
+  width: 100%;
+  margin: auto;
+  padding-left: 200px;
+}
+
+.pokebola {
+  width: 50px;
+}
+.pokedexIcon {
+  width: 280px;
+  height: 100px;
+}
+
+main {
+  @include align-and-justify;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 50px;
+  width: 80%;
+  margin: auto;
+}
+
+.pokemon-image {
+  @include flex-and-align;
+  flex-direction: column;
+  .pokeImg {
+    width: 480px;
+  }
+  h1 {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    @include rounded-box;
+    width: 300px;
+    margin-top: 10px;
+    padding: 10px;
+  }
+}
+
+.pokemon-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 2rem;
+  align-content: space-around;
+  background-color: rgb(215, 232, 244);
+  @include rounded-box;
+  width: 80%;
+  height: 500px;
+  .detail {
+    font-size: 30px;
+  }
+  p {
+    max-width: 100px;
+    font-family: $font-body;
+    justify-content: flex-start;
+    padding-top: 10px;
+    font-size: 15px;
+  }
+}
+
+.search-bar {
+  @include flex-and-align;
+  text-align: center;
+  padding: 30px 20px;
+  @include rounded-box;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  width: fit-content;
+  width: 758px;
+  height: 52px;
+  margin-top: 30px;
+  .search-input {
+    width: 758px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background: transparent;
+
+    font-size: 16px;
+    width: 100%;
+  }
+  .search-button {
+    @include rounded-box;
+    padding: 10px;
+    background-color: $background-color-body;
+    cursor: pointer;
+  }
+}
+
+footer {
+  background-color: $background-color-header;
+  padding: 40px;
+}
+
+.other-pokemon {
+  @include flex-and-align;
+  justify-content: space-evenly;
+  cursor: pointer;
+  img {
+    background-color: grey;
+    @include rounded-box;
+    width: auto;
+    height: 200px;
+  }
+  h1{
+    color: aliceblue;
+  }
+}

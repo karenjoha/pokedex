@@ -3,11 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/css/style.css">
     <title>Pokedex</title>
-</head>
-<body>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <h1>Pokedex</h1>
-</body>
+  </head>
+  <body>
+    <div class="pokedex">
+      <header class="pokedex-header">
+        <nav class="pokedex">
+          <img src="" class="pokebola" alt="pokebola" />
+          <img src="" class="pokedexIcon" alt="pokedexIcon" />
+        </nav>
+
+        <div class="search-bar">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search Pokemon"
+          />
+          <button class="search-button">Search</button>
+        </div>
+      </header>
+      <main>
+        <div class="pokemon-image">
+          <h1 class="pokemon-name"></h1>
+          <img src="" class="pokeImg" alt="pokeImg" />
+        </div>
+        <div class="pokemon-details">
+          <div class="detail">
+            No:
+            <p class="pokemon-No">006</p>
+          </div>
+          <div class="detail">
+            Level:
+            <p class="pokemon-level">100</p>
+          </div>
+          <div class="detail">
+            Type:
+            <p class="pokemon-type">FIRE</p>
+          </div>
+          <div class="detail">
+            Ability:
+            <p class="pokemon-ability">FLAMES</p>
+          </div>
+          <div class="detail">
+            Height:
+            <p class="pokemon-height">1.7 M</p>
+          </div>
+          <div class="detail">
+            Weight:
+            <p class="pokemon-weight">90.5 KG</p>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <div class="other-pokemon">
+        <h1>OTHERS</h1>
+        <img src="" alt="other pokemon 1" class="PokeOthers" />
+        <img src="" alt="other pokemon 2" class="PokeOthers" />
+        <img src="" alt="other pokemon 3" class="PokeOthers" />
+        <img src="" alt="other pokemon 4" class="PokeOthers" />
+      </div>
+    </footer>
+    <script src="bundle.js"></script>
+  </body>
 </html>
