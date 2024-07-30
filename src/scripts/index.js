@@ -105,3 +105,6 @@ searchButton.addEventListener("click", () => {
     console.error("Please enter a Pokémon name.");
   }
 });
+
+
+/*commit prueba */
