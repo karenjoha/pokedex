@@ -56,6 +56,7 @@ header nav {
 
 .pokedex {
   width: 100%;
+  justify-content: center;
 }
 
 
@@ -119,10 +120,10 @@ main {
   align-content: space-around;
   background-color: rgb(215, 232, 244);
   @include rounded-box;
-  width: 80%;
   height: 500px;
   .detail {
     font-size: 30px;
+    justify-self: center;
     @media (max-width: 768px) {
       font-size: 20px;
       width: 100%;
@@ -177,15 +178,18 @@ main {
 
 footer {
   background-color: $background-color-header;
-  @media (max-width: 768px) {
-    width: 100%;
-  }
+  padding: 1rem
+
 }
 
 .other-pokemon {
   @include flex-and-align;
   justify-content: space-evenly;
   cursor: pointer;
+  overflow-x: scroll;
+  @media (min-width: 768px) {
+    overflow-x: hidden;
+  }
   img {
     background-color: grey;
     @include rounded-box;
@@ -193,6 +197,7 @@ footer {
     height: 200px;
     @media (max-width: 768px) {
       height: 150px;
+      margin: 0rem 1rem;
     }
   }
   h1{
