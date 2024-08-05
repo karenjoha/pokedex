@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --mode development",
-    "build": "webpack serve --mode production",
+    "build": "webpack --mode production",
+    "start": "webpack serve --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
